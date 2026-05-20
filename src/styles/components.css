@@ -1,0 +1,158 @@
+/* ─────────────────────────────────────
+   COMPONENTS — buttons, layout, shared
+   ───────────────────────────────────── */
+
+/* ─── PAGE SYSTEM ─── */
+.page {
+    display: none;
+    padding-top: var(--nav-h);
+    min-height: 100vh;
+}
+
+.page.active {
+    display: block;
+}
+
+/* ─── BUTTONS ─── */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 28px;
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background: var(--teal);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: #007a8a;
+    transform: translateY(-1px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--dark-grey);
+    border: 1.5px solid var(--dark-grey);
+}
+
+.btn-outline:hover {
+    border-color: var(--teal);
+    color: var(--teal);
+}
+
+.btn-outline-white {
+    background: transparent;
+    color: var(--white);
+    border: 1.5px solid rgba(255, 255, 255, 0.6);
+}
+
+.btn-outline-white:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-ghost {
+    background: transparent;
+    color: var(--teal);
+    padding-left: 0;
+}
+
+.btn-ghost::after {
+    content: '→';
+    transition: var(--transition);
+}
+
+.btn-ghost:hover::after {
+    transform: translateX(4px);
+}
+
+.btn-ghost:hover {
+    gap: 12px;
+}
+
+/* ─── SECTION BASICS ─── */
+section {
+    padding: 90px 5%;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.section-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--teal);
+    font-weight: 500;
+    margin-bottom: 16px;
+    font-family: var(--font-body);
+}
+
+.section-divider {
+    width: 40px;
+    height: 2px;
+    background: var(--teal);
+    margin: 20px 0 30px;
+}
+
+/* ─── GRID UTILITIES ─── */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+}
+
+/* ─── LOTUS SVG ─── */
+.lotus-bg {
+    position: absolute;
+    opacity: 0.04;
+    pointer-events: none;
+}
+
+/* ─── PLACEHOLDER VISUALS ─── */
+.person-silhouette {
+    width: 60%;
+    height: 90%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+    border-radius: 50% 50% 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ─── SHARED TAG ─── */
+.tag {
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: rgba(0, 148, 163, 0.08);
+    color: var(--teal);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+}

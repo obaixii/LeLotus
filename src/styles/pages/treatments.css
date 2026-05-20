@@ -1,0 +1,77 @@
+/* ─────────────────────────────────────
+   TREATMENTS PAGE
+   ───────────────────────────────────── */
+
+.filter-tabs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+}
+
+.filter-tab {
+    padding: 8px 20px;
+    border-radius: 30px;
+    border: 1.5px solid var(--border);
+    background: var(--white);
+    color: var(--dark-grey);
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: var(--font-body);
+    font-weight: 500;
+}
+
+.filter-tab:hover,
+.filter-tab.active {
+    background: var(--teal);
+    color: var(--white);
+    border-color: var(--teal);
+}
+
+.treatment-list-card {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 0;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    transition: var(--transition);
+}
+
+.treatment-list-card:hover {
+    box-shadow: var(--shadow);
+    border-color: var(--teal);
+}
+
+.tlc-img {
+    aspect-ratio: 1;
+    background: linear-gradient(160deg, #c8e8e0, #9dd0c4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.tlc-body {
+    padding: 28px 32px;
+}
+
+.tlc-body h3 {
+    margin-bottom: 10px;
+}
+
+.tlc-body p {
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+}
+
+.tlc-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,301 @@
+/* ─────────────────────────────────────
+   FOOTER
+   ───────────────────────────────────── */
+
+footer {
+    background: var(--dark-grey);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ── Main body ── */
+footer .container {
+    padding: 56px 5% 0;
+}
+
+/* ── Brand + cols: 2 main columns ── */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    margin-bottom: 48px;
+    align-items: start;
+}
+
+/* Brand col */
+.footer-brand p {
+    font-size: 0.82rem;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.4);
+    margin-top: 14px;
+}
+
+.footer-logo {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    color: var(--white);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.footer-logo span {
+    color: var(--mint);
+}
+
+.footer-socials {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.footer-socials a {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-socials a:hover {
+    border-color: var(--mint);
+    color: var(--mint);
+    background: rgba(100, 196, 149, 0.08);
+}
+
+/* ── Footer cols row: always 3 cols ── */
+.footer-cols-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.footer-col h5 {
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.footer-col a {
+    display: block;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.81rem;
+    margin-bottom: 8px;
+    transition: var(--transition);
+    line-height: 1.4;
+}
+
+.footer-col a:hover {
+    color: var(--mint);
+    padding-left: 4px;
+}
+
+/* City tags */
+.footer-cities {
+    margin-top: 4px;
+}
+
+.footer-city-tag {
+    display: inline-block;
+    font-size: 0.70rem;
+    letter-spacing: 0.05em;
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.45);
+    padding: 3px 9px;
+    border-radius: 20px;
+    margin: 3px 3px 3px 0;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ── Locations section ── */
+.footer-locations {
+    background: var(--white);
+    margin: 0 -5%;
+    padding: 40px 5%;
+}
+
+.footer-locations-title {
+    font-family: var(--font-body);
+    font-size: 2rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--dark-grey);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer-locations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.footer-location-card {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    transition: var(--transition);
+    background: var(--white);
+}
+
+.footer-location-card:hover {
+    border-color: var(--teal);
+    box-shadow: var(--shadow);
+}
+
+.footer-location-city {
+    font-size: 0.75rem;
+    color: var(--teal);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.footer-location-address {
+    font-size: 0.73rem;
+    color: var(--mid-grey);
+    line-height: 1.55;
+    margin-bottom: 10px;
+}
+
+.footer-location-phones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 8px;
+}
+
+.footer-location-phones a {
+    font-size: 0.7rem;
+    color: var(--dark-grey);
+    text-decoration: none;
+    background: rgba(0, 148, 163, 0.06);
+    padding: 2px 9px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.footer-location-phones a:hover {
+    color: var(--teal);
+    background: rgba(0, 148, 163, 0.12);
+}
+
+.footer-location-hours {
+    font-size: 0.68rem;
+    color: var(--mid-grey);
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.footer-location-map {
+    font-size: 0.68rem;
+    color: var(--teal);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.footer-location-map:hover {
+    color: #007a8a;
+    letter-spacing: 0.08em;
+}
+
+/* ── Bottom bar ── */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 22px 0 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-bottom a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-bottom a:hover {
+    color: var(--mint);
+}
+
+/* ════════════════════════
+   RESPONSIVE
+════════════════════════ */
+
+/* Tablet — 1024px */
+@media (max-width: 1024px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .footer-cols-row {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .footer-locations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile — 768px */
+@media (max-width: 768px) {
+    footer .container {
+        padding: 40px 5% 0;
+    }
+
+    /* Stack brand above cols */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    /* Cols stay 2-col on mobile */
+    .footer-cols-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .footer-locations-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .footer-location-card {
+        padding: 14px 16px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+        padding-bottom: 28px;
+    }
+}
+
+/* Small mobile — 480px */
+@media (max-width: 480px) {
+    .footer-cols-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .footer-locations-grid {
+        grid-template-columns: 1fr;
+    }
+}

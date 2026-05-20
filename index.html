@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>lelotus</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+  <script>
+    // ─── PAGE NAVIGATION ───
+    function showPage(pageId) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById('page-' + pageId).classList.add('active');
+
+      document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+      const navEl = document.getElementById('nav-' + pageId);
+      if (navEl) navEl.classList.add('active');
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return false;
+    }
+
+    // ─── MOBILE NAV ───
+    function toggleMobileNav() {
+      document.getElementById('mobile-nav').classList.toggle('open');
+    }
+
+    // ─── TREATMENT FILTER ───
+    function filterTreatments(cat, btn) {
+      document.querySelectorAll('.filter-tabs .filter-tab').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+
+      document.querySelectorAll('.treatment-list-card').forEach(card => {
+        if (cat === 'all' || card.dataset.cat === cat) {
+          card.style.display = 'grid';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // ─── BOOKING ───
+    function handleBooking() {
+      document.getElementById('success-modal').style.display = 'flex';
+    }
+    function closeModal() {
+      document.getElementById('success-modal').style.display = 'none';
+    }
+
+    // ─── FADE-UP ANIMATIONS ───
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.treatment-card, .why-card, .doctor-card, .ba-card, .value-card').forEach(el => {
+      el.classList.add('fade-up');
+      observer.observe(el);
+    });
+
+    // ─── NAV SCROLL ───
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('main-nav');
+      nav.style.boxShadow = window.scrollY > 20 ? '0 4px 24px rgba(0,0,0,0.06)' : 'none';
+    });
+  </script>
+</body>
+
+</html>

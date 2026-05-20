@@ -1,0 +1,28 @@
+/* ─────────────────────────────────────
+   INDEX.CSS — single entry point
+   Import this file only in main.tsx:
+   import "./styles/index.css"
+   ───────────────────────────────────── */
+
+/* Tailwind must be first */
+@import "tailwindcss";
+
+/* Foundation */
+@import "./globals.css";
+@import "./components.css";
+
+/* Pages */
+@import "./pages/home.css";
+@import "./pages/about.css";
+@import "./pages/treatments.css";
+@import "./pages/doctors.css";
+@import "./pages/before-after.css";
+@import "./pages/booking.css";
+
+/* Layout */
+@import "./nav.css";
+@import "./footer.css";
+
+/* Must come last */
+@import "./animations.css";
+@import "./responsive.css";
