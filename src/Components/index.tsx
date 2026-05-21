@@ -25,5 +25,8 @@ export { default as TreatmentsList } from './TreatmentsPage/TreatmentsList';
 export { default as CTATreatments } from './TreatmentsPage/CTATreatments';
 
 
-
-
+// DOCTORS PAGE
+export { default as HeroDoctors } from './DoctorsPage/HeroDoctors';
+export { default as FilterTabsDoctor } from './DoctorsPage/FilterTabsDoctor';
+export { default as DoctorsList } from './DoctorsPage/DoctorsList';
+export { default as CTADoctors } from './DoctorsPage/CTADoctors';
