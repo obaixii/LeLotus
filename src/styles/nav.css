@@ -10,7 +10,7 @@ nav {
     align-items: center;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--color-border);
     padding: 0 5%;
     transition: var(--transition);
 }
@@ -23,16 +23,11 @@ nav {
     flex-shrink: 0;
 }
 
-.nav-logo-icon {
-    width: 36px;
-    height: 36px;
-}
-
 .nav-logo-text {
     font-family: var(--font-display);
     font-size: 1rem;
     letter-spacing: 0.12em;
-    color: var(--dark-grey);
+    color: var(--color-dark-grey);
     line-height: 1.2;
     text-transform: uppercase;
 }
@@ -41,7 +36,7 @@ nav {
     display: block;
     font-size: 0.6rem;
     letter-spacing: 0.2em;
-    color: var(--mid-grey);
+    color: var(--color-mid-grey);
     font-family: var(--font-body);
     font-weight: 300;
 }
@@ -56,7 +51,7 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: var(--dark-grey);
+    color: var(--color-dark-grey);
     font-size: 0.78rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -69,16 +64,16 @@ nav {
 }
 
 .nav-links a:hover {
-    color: var(--teal);
+    color: var(--color-teal);
 }
 
 .nav-links a.active {
-    color: var(--teal);
+    color: var(--color-teal);
 }
 
 .nav-cta {
-    background: var(--teal) !important;
-    color: var(--white) !important;
+    background: var(--color-teal) !important;
+    color: var(--color-white) !important;
     border-radius: 6px !important;
     padding: 10px 20px !important;
     margin-left: 12px;
@@ -106,7 +101,7 @@ nav {
 .nav-hamburger span {
     width: 24px;
     height: 2px;
-    background: var(--dark-grey);
+    background: var(--color-dark-grey);
     display: block;
     transition: var(--transition);
     transform-origin: center;
@@ -133,15 +128,12 @@ nav {
     top: var(--nav-h);
     left: 0;
     right: 0;
-
-    /* ADD THIS */
     height: calc(100vh - var(--nav-h));
     overflow-y: auto;
-
-    background: var(--white);
+    background: var(--color-white);
     z-index: 999;
     padding: 20px 5%;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--color-border);
     flex-direction: column;
     gap: 2rem;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
@@ -153,32 +145,28 @@ nav {
 
 .mobile-nav a {
     text-decoration: none;
-    color: var(--dark-grey);
-
+    color: var(--color-dark-grey);
     padding: 16px 0;
     font-size: 1rem;
-
     letter-spacing: 0.08em;
     text-transform: uppercase;
-
-    border-bottom: 1px solid var(--border);
-
+    border-bottom: 1px solid var(--color-border);
     font-weight: 500;
     transition: var(--transition);
 }
 
 .mobile-nav a:hover {
-    color: var(--teal);
+    color: var(--color-teal);
     padding-left: 6px;
 }
 
 .mobile-nav a.active {
-    color: var(--teal);
+    color: var(--color-teal);
 }
 
 .mobile-nav a.nav-cta {
-    background: var(--teal);
-    color: var(--white) !important;
+    background: var(--color-teal);
+    color: var(--color-white) !important;
     text-align: center;
     border-radius: 6px;
     padding: 14px;
@@ -190,9 +178,6 @@ nav {
     background: #007a8a;
     padding-left: 0;
 }
-
-
-
 
 /* ─── NAV RESPONSIVE ─── */
 @media (max-width: 1024px) {

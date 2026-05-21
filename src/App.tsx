@@ -10,11 +10,7 @@ export default function App() {
         {/* Routes will go here */}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/treatments" element={<Home />} />
-          <Route path="/doctors" element={<Home />} />
-          <Route path="/before-after" element={<Home />} />
-          <Route path="/booking" element={<Home />} />
+          <Route path="/about" element={<About/>} />
         </Routes>
         <Footer />
       </div>

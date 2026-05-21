@@ -3,7 +3,7 @@
    ───────────────────────────────────── */
 
 footer {
-    background: var(--dark-grey);
+    background: var(--color-dark-grey);
     color: rgba(255, 255, 255, 0.6);
 }
 
@@ -32,13 +32,13 @@ footer .container {
 .footer-logo {
     font-family: var(--font-display);
     font-size: 1.1rem;
-    color: var(--white);
+    color: var(--color-white);
     letter-spacing: 0.12em;
     text-transform: uppercase;
 }
 
 .footer-logo span {
-    color: var(--mint);
+    color: var(--color-mint);
 }
 
 .footer-socials {
@@ -61,8 +61,8 @@ footer .container {
 }
 
 .footer-socials a:hover {
-    border-color: var(--mint);
-    color: var(--mint);
+    border-color: var(--color-mint);
+    color: var(--color-mint);
     background: rgba(100, 196, 149, 0.08);
 }
 
@@ -78,7 +78,7 @@ footer .container {
     font-size: 0.65rem;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--white);
+    color: var(--color-white);
     margin-bottom: 16px;
     font-weight: 600;
 }
@@ -94,7 +94,7 @@ footer .container {
 }
 
 .footer-col a:hover {
-    color: var(--mint);
+    color: var(--color-mint);
     padding-left: 4px;
 }
 
@@ -117,7 +117,7 @@ footer .container {
 
 /* ── Locations section ── */
 .footer-locations {
-    background: var(--white);
+    background: var(--color-white);
     margin: 0 -5%;
     padding: 40px 5%;
 }
@@ -125,9 +125,9 @@ footer .container {
 .footer-locations-title {
     font-family: var(--font-body);
     font-size: 2rem;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.10em;
     text-transform: uppercase;
-    color: var(--dark-grey);
+    color: var(--color-dark-grey);
     font-weight: 600;
     margin-bottom: 20px;
 }
@@ -135,25 +135,25 @@ footer .container {
 .footer-locations-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+    gap: 1.5rem;
 }
 
 .footer-location-card {
-    border: 1px solid var(--border);
+    border: 2px solid var(--color-border);
     border-radius: 10px;
     padding: 18px 20px;
     transition: var(--transition);
-    background: var(--white);
+    background: var(--color-white);
 }
 
 .footer-location-card:hover {
-    border-color: var(--teal);
+    border-color: var(--color-teal);
     box-shadow: var(--shadow);
 }
 
 .footer-location-city {
-    font-size: 0.75rem;
-    color: var(--teal);
+    font-size: 1rem;
+    color: var(--color-teal);
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -161,8 +161,8 @@ footer .container {
 }
 
 .footer-location-address {
-    font-size: 0.73rem;
-    color: var(--mid-grey);
+    font-size: 0.80rem;
+    color: var(--color-dark-grey);
     line-height: 1.55;
     margin-bottom: 10px;
 }
@@ -175,34 +175,37 @@ footer .container {
 }
 
 .footer-location-phones a {
-    font-size: 0.7rem;
-    color: var(--dark-grey);
+    font-size: 0.8rem;
+    color: var(--color-dark-grey);
     text-decoration: none;
     background: rgba(0, 148, 163, 0.06);
     padding: 2px 9px;
     border-radius: 20px;
-    border: 1px solid var(--border);
+    border: 1px solid var(--color-border);
     transition: var(--transition);
 }
 
 .footer-location-phones a:hover {
-    color: var(--teal);
+    color: var(--color-teal);
     background: rgba(0, 148, 163, 0.12);
 }
 
 .footer-location-hours {
-    font-size: 0.68rem;
-    color: var(--mid-grey);
+    font-size: 0.70rem;
     margin-bottom: 10px;
     line-height: 1.5;
 }
 
 .footer-location-map {
-    font-size: 0.68rem;
-    color: var(--teal);
+    font-size: 0.90rem;
+    color: var(--color-teal);
+    background: rgba(0, 148, 163, 0.06);
+    padding: 2px 9px;
+    border-radius: 20px;
+    border: 1px solid var(--color-border);
+    transition: var(--transition);
     text-decoration: none;
     letter-spacing: 0.04em;
-    transition: var(--transition);
     display: inline-block;
 }
 
@@ -229,7 +232,7 @@ footer .container {
 }
 
 .footer-bottom a:hover {
-    color: var(--mint);
+    color: var(--color-mint);
 }
 
 /* ════════════════════════
@@ -259,13 +262,11 @@ footer .container {
         padding: 40px 5% 0;
     }
 
-    /* Stack brand above cols */
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 32px;
     }
 
-    /* Cols stay 2-col on mobile */
     .footer-cols-row {
         grid-template-columns: repeat(2, 1fr);
         gap: 24px;

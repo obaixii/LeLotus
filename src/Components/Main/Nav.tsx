@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { NavLinks } from "../../Data/NavLinks.ts";
+import logo from "../../assets/LogoHorizontal.png";
 export default function Nav() {
     const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -16,16 +17,9 @@ export default function Nav() {
         <>
             <nav id="main-nav">
                 <NavLink className="nav-logo" to="/" onClick={closeMobileNav}>
-                    <svg className="nav-logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <ellipse cx="18" cy="28" rx="3" ry="5" fill="#0094a3" opacity="0.3" />
-                        <ellipse cx="18" cy="22" rx="5" ry="9" fill="#0094a3" opacity="0.5" />
-                        <ellipse cx="12" cy="20" rx="4" ry="7" transform="rotate(-30 12 20)" fill="#64c495" opacity="0.6" />
-                        <ellipse cx="24" cy="20" rx="4" ry="7" transform="rotate(30 24 20)" fill="#64c495" opacity="0.6" />
-                        <ellipse cx="8" cy="17" rx="3" ry="6" transform="rotate(-55 8 17)" fill="#0094a3" opacity="0.4" />
-                        <ellipse cx="28" cy="17" rx="3" ry="6" transform="rotate(55 28 17)" fill="#0094a3" opacity="0.4" />
-                        <circle cx="18" cy="22" r="2.5" fill="#0094a3" />
-                    </svg>
-                    <div className="nav-logo-text">Le Lotus<span>Clinique</span></div>
+                    <div className="h-10 sm:h-12">
+                        <img src={logo} alt="Le Lotus Clinique" className="h-full w-auto object-cover" />
+                    </div>
                 </NavLink>
 
                 <ul className="nav-links">

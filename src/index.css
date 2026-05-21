@@ -1,0 +1,312 @@
+/* ─────────────────────────────────────
+   INDEX.CSS — single entry point
+   Import this file only in main.tsx:
+   import "./styles/index.css"
+   ───────────────────────────────────── */
+
+/* Tailwind must be first */
+@import "tailwindcss";
+
+/* Pages */
+@import "./styles/pages/home.css";
+@import "./styles/pages/about.css";
+@import "./styles/pages/treatments.css";
+@import "./styles/pages/doctors.css";
+@import "./styles/pages/beforeAfter.css";
+@import "./styles/pages/booking.css";
+
+/* Layout */
+@import "./styles/nav.css";
+@import "./styles/footer.css";
+
+/* Must come last */
+@import "./styles/animations.css";
+@import "./styles/responsive.css";
+
+/* ─────────────────────────────────────
+   THEME — Tailwind v4 custom tokens
+   Usage examples:
+     bg-white        → --color-white
+     bg-teal         → --color-teal
+     text-dark-grey  → --color-dark-grey
+     bg-light-bg     → --color-light-bg
+     bg-soft-grey    → --color-soft-grey
+     text-mid-grey   → --color-mid-grey
+     text-mint       → --color-mint
+     shadow-sm/md    → use --shadow / --shadow-lg manually
+   ───────────────────────────────────── */
+
+@theme {
+   /* ─── Colors ─── */
+   /* Single dash after --color- is required for Tailwind v4
+      to generate utility classes: bg-*, text-*, border-*, etc. */
+   --color-white: #ffffff;
+   --color-black: #0a0a0a;
+   --color-teal: #0094a3;
+   --color-mint: #64c495;
+   --color-light-bg: #f8faf9;
+   --color-soft-grey: #f2f4f3;
+   --color-mid-grey: #9aa5a2;
+   --color-dark-grey: #2c3030;
+   --color-border: rgba(0, 148, 163, 0.15);
+
+   /* ─── Shadows (not color utilities — use as var() manually) ─── */
+   --shadow: 0 8px 40px rgba(0, 148, 163, 0.10);
+   --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.10);
+
+   /* ─── Typography ─── */
+   --font-display: 'Olivera', 'Georgia', serif;
+   --font-body: 'Funnel Sans', sans-serif;
+
+   /* ─── Spacing / misc ─── */
+   --nav-h: 72px;
+   --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─────────────────────────────────────
+   GLOBALS — reset, base styles
+   ───────────────────────────────────── */
+
+@font-face {
+   font-family: 'Olivera';
+   src: local('Georgia'), local('Times New Roman');
+   /* Fallback for Olivera — use Georgia as closest match */
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+   font-family: var(--font-body);
+   background: var(--color-white);
+   color: var(--color-dark-grey);
+   font-size: 16px;
+   line-height: 1.6;
+   overflow-x: hidden;
+}
+
+/* ─── TYPOGRAPHY ─── */
+.serif {
+   font-family: var(--font-display);
+}
+
+.teal {
+   color: var(--color-teal);
+}
+
+.mint {
+   color: var(--color-mint);
+}
+
+h1,
+h2,
+h3,
+h4 {
+   font-family: var(--font-display);
+   font-weight: 400;
+   line-height: 1.15;
+   letter-spacing: -0.02em;
+}
+
+h1 {
+   font-size: clamp(2.8rem, 5vw, 5rem);
+}
+
+h2 {
+   font-size: clamp(2rem, 3.5vw, 3.2rem);
+}
+
+h3 {
+   font-size: clamp(1.3rem, 2vw, 1.8rem);
+}
+
+h4 {
+   font-size: 1.1rem;
+}
+
+p {
+   font-size: 0.95rem;
+   line-height: 1.75;
+}
+
+/* ─── SCROLLBAR ─── */
+::-webkit-scrollbar {
+   width: 6px;
+}
+
+::-webkit-scrollbar-track {
+   background: var(--color-soft-grey);
+}
+
+::-webkit-scrollbar-thumb {
+   background: var(--color-teal);
+   border-radius: 3px;
+}
+
+
+/* ─────────────────────────────────────
+   COMPONENTS — buttons, layout, shared
+   ───────────────────────────────────── */
+
+/* ─── PAGE SYSTEM ─── */
+.page {
+   padding-top: var(--nav-h);
+   min-height: 100vh;
+}
+
+.page.active {
+   display: block;
+}
+
+/* ─── BUTTONS ─── */
+.btn {
+   display: inline-flex;
+   align-items: center;
+   gap: 8px;
+   padding: 13px 28px;
+   border-radius: 6px;
+   font-family: var(--font-body);
+   font-size: 0.82rem;
+   letter-spacing: 0.1em;
+   text-transform: uppercase;
+   font-weight: 500;
+   text-decoration: none;
+   border: none;
+   cursor: pointer;
+   transition: var(--transition);
+}
+
+.btn-primary {
+   background: var(--color-teal);
+   color: var(--color-white);
+}
+
+.btn-primary:hover {
+   background: #007a8a;
+   transform: translateY(-1px);
+}
+
+.btn-outline {
+   background: transparent;
+   color: var(--color-dark-grey);
+   border: 1.5px solid var(--color-dark-grey);
+}
+
+.btn-outline:hover {
+   border-color: var(--color-teal);
+   color: var(--color-teal);
+}
+
+.btn-outline-white {
+   background: transparent;
+   color: var(--color-white);
+   border: 1.5px solid rgba(255, 255, 255, 0.6);
+}
+
+.btn-outline-white:hover {
+   background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-ghost {
+   background: transparent;
+   color: var(--color-teal);
+   padding-left: 0;
+}
+
+.btn-ghost::after {
+   content: '→';
+   transition: var(--transition);
+}
+
+.btn-ghost:hover::after {
+   transform: translateX(4px);
+}
+
+.btn-ghost:hover {
+   gap: 12px;
+}
+
+/* ─── SECTION BASICS ─── */
+section {
+   padding: 90px 5%;
+}
+
+.container {
+   max-width: 1280px;
+   margin: 0 auto;
+}
+
+.section-label {
+   font-size: 0.7rem;
+   letter-spacing: 0.2em;
+   text-transform: uppercase;
+   color: var(--color-teal);
+   font-weight: 500;
+   margin-bottom: 16px;
+   font-family: var(--font-body);
+}
+
+.section-divider {
+   width: 40px;
+   height: 2px;
+   background: var(--color-teal);
+   margin: 20px 0 30px;
+}
+
+/* ─── GRID UTILITIES ─── */
+.grid-2 {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 60px;
+   align-items: center;
+}
+
+.grid-3 {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 32px;
+}
+
+.grid-4 {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 28px;
+}
+
+/* ─── LOTUS SVG ─── */
+.lotus-bg {
+   position: absolute;
+   opacity: 0.04;
+   pointer-events: none;
+}
+
+/* ─── PLACEHOLDER VISUALS ─── */
+.person-silhouette {
+   width: 60%;
+   height: 90%;
+   background: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+   border-radius: 50% 50% 0 0;
+   position: relative;
+   overflow: hidden;
+}
+
+/* ─── SHARED TAG ─── */
+.tag {
+   font-size: 0.68rem;
+   letter-spacing: 0.08em;
+   text-transform: uppercase;
+   background: rgba(0, 148, 163, 0.08);
+   color: var(--color-teal);
+   padding: 4px 12px;
+   border-radius: 20px;
+   font-weight: 500;
+}
