@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import { Footer, Nav } from './Components/index.tsx';
-import { About, Home } from './Pages/index.tsx';
+import { About, Home, Treatments } from './Pages/index.tsx';
 
 export default function App() {
   return (
@@ -11,6 +11,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About/>} />
+          <Route path="/treatments" element={<Treatments/>} />
         </Routes>
         <Footer />
       </div>

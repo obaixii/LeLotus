@@ -1,7 +1,20 @@
-import React from 'react'
+import { HeroTreatments, FiltersTabsTreatment, TreatmentsList, CTATreatments } from "../Components";
 
 export default function Treatments() {
+
+
     return (
-        <div>Treatments</div>
+        <div id="page-treatments" className="page">
+
+            <HeroTreatments />
+            <section>
+                <div className="container">
+                    <FiltersTabsTreatment />
+                    <TreatmentsList />
+                </div>
+            </section>
+
+            <CTATreatments />
+        </div>
     )
 }
