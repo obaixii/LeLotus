@@ -5,42 +5,59 @@ const locations = [
         city: "Islamabad — F8-1",
         address: "United Plaza, Besides Studio M Salon, Street No. 33, Sector F8-1",
         phones: ["0318-5457381", "0305-5181166"],
-        hours: "Mon–Sat: 10AM–8PM · Sun: 12–7PM (Alt)",
-        map: "https://maps.app.goo.gl/nkSzrMtbbsH1wa138"
+        hours: {
+            monSat: "10:00 AM – 8:00 PM",
+            sun: "12:00 PM – 7:00 PM"
+        }, map: "https://maps.app.goo.gl/nkSzrMtbbsH1wa138"
     },
     {
         city: "Rawalpindi — DHA Phase 2",
         address: "Crystal Heights, Plaza 14, Bank Al Habib Building, Main GT Road",
         phones: ["0335-5181166", "0318-5457380"],
-        hours: "Mon–Sat: 10AM–8PM · Sun: 12–7PM (Alt)",
+        hours: {
+            monSat: "10:00 AM – 8:00 PM",
+            sun: "12:00 PM – 7:00 PM"
+        },
         map: "https://maps.app.goo.gl/gUaab1jZLfaHmjKW9"
+    },
+    {
+        city: "Multan",
+        address: "Al Mustafa House, Gilani Colony, Ghaus-e-Azam Road",
+        phones: ["0344-4455858", "061-6304305"],
+        hours: {
+            monSat: "10:00 AM – 8:00 PM",
+            sun: "12:00 PM – 7:00 PM"
+        },
+        map: "https://maps.app.goo.gl/2HnTFKEfDaRYZvyv7"
     },
     {
         city: "Lahore — DHA Phase 3",
         address: "2nd Floor, Clinix Pharmacy, Z Block Commercial, DHA Phase 3",
         phones: ["0306-5181166", "0337-9923217"],
-        hours: "Mon–Sat: 10AM–9PM · Sun: 12–10PM",
+        hours: {
+            monSat: "10:00 AM – 9:00 PM",
+            sun: "12:00 PM – 10:00 PM"
+        },
         map: "https://maps.app.goo.gl/6VBg3b7Nehfwjw9T7"
     },
     {
         city: "Karachi",
         address: "Dil-Kusha Gohar Residency, Shop #5, Main Tariq Road",
         phones: ["0318-5457382", "021-34531177"],
-        hours: "Mon–Sat: 11AM–10PM · Sun: 3–10PM",
+        hours: {
+            monSat: "11:00 AM – 10:00 PM",
+            sun: "3:00 PM – 10:00 PM"
+        },
         map: "https://maps.app.goo.gl/bkhNH3tPVCsAJg6Z6"
-    },
-    {
-        city: "Multan",
-        address: "Al Mustafa House, Gilani Colony, Ghaus-e-Azam Road",
-        phones: ["0344-4455858", "061-6304305"],
-        hours: "Mon–Sat: 10AM–8PM · Sun: 12–7PM (Alt)",
-        map: "https://maps.app.goo.gl/2HnTFKEfDaRYZvyv7"
     },
     {
         city: "Peshawar",
         address: "Muhammad Arcade, Above Bank of Khyber, Near McDonald's, Ring Road",
         phones: ["0331-5181166", "0337-9923216"],
-        hours: "Mon–Sat: 10AM–8PM · Sun: 12–7PM",
+        hours: {
+            monSat: "10:00 AM – 8:00 PM",
+            sun: "12:00 PM – 7:00 PM"
+        },
         map: "https://maps.app.goo.gl/dvyvtavn5Q7HEBXT9"
     },
 ]
@@ -132,7 +149,10 @@ export default function Footer() {
                                         <a key={p} href={`tel:${p}`}>{p}</a>
                                     ))}
                                 </div>
-                                <div className="footer-location-hours">{loc.hours}</div>
+                                <div className="footer-location-hours text-dark-grey">
+                                    <p><span className="font-semibold">Monday–Saturday:</span> {loc.hours.monSat}</p>
+                                    <p><span className="font-semibold">Sunday:</span> {loc.hours.sun}</p>
+                                </div>
                                 <a href={loc.map} target="_blank" rel="noreferrer" className="footer-location-map">View on Map →</a>
                             </div>
                         ))}

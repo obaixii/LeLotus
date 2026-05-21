@@ -32,8 +32,8 @@
 }
 
 .btn-primary {
-    background: var(--teal);
-    color: var(--white);
+    background: var(--color-teal);
+    color: var(--color-white);
 }
 
 .btn-primary:hover {
@@ -43,18 +43,18 @@
 
 .btn-outline {
     background: transparent;
-    color: var(--dark-grey);
-    border: 1.5px solid var(--dark-grey);
+    color: var(--color-dark-grey);
+    border: 1.5px solid var(--color-dark-grey);
 }
 
 .btn-outline:hover {
-    border-color: var(--teal);
-    color: var(--teal);
+    border-color: var(--color-teal);
+    color: var(--color-teal);
 }
 
 .btn-outline-white {
     background: transparent;
-    color: var(--white);
+    color: var(--color-white);
     border: 1.5px solid rgba(255, 255, 255, 0.6);
 }
 
@@ -64,7 +64,7 @@
 
 .btn-ghost {
     background: transparent;
-    color: var(--teal);
+    color: var(--color-teal);
     padding-left: 0;
 }
 
@@ -95,7 +95,7 @@ section {
     font-size: 0.7rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--teal);
+    color: var(--color-teal);
     font-weight: 500;
     margin-bottom: 16px;
     font-family: var(--font-body);
@@ -104,7 +104,7 @@ section {
 .section-divider {
     width: 40px;
     height: 2px;
-    background: var(--teal);
+    background: var(--color-teal);
     margin: 20px 0 30px;
 }
 
@@ -151,7 +151,7 @@ section {
     letter-spacing: 0.08em;
     text-transform: uppercase;
     background: rgba(0, 148, 163, 0.08);
-    color: var(--teal);
+    color: var(--color-teal);
     padding: 4px 12px;
     border-radius: 20px;
     font-weight: 500;

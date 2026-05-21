@@ -9,7 +9,7 @@ export default function HeroHome() {
                     <div className="hero-content">
                         <div className="hero-eyebrow">Aesthetic Excellence</div>
                         <h1>Enhancing Beauty.<br /><em>Elevating Confidence.</em></h1>
-                        <p className="hero-desc">Advanced aesthetic treatments for skin, body and hair with world-className care and cutting-edge technology for natural, lasting results.</p>
+                        <p className="hero-desc">Advanced aesthetic treatments for skin, body and hair with world-class care and cutting-edge technology for natural, lasting results.</p>
                         <div className="hero-actions">
                             <a href="#" className="btn btn-primary" >Book Consultation</a>
                             <a href="#" className="btn btn-outline">Explore Treatments</a>

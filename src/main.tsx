@@ -2,10 +2,9 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
+import "./index.css";
 
 // Styles Sheets — Don't edit the order of these imports, it will break the styling of the app
-import "./styles/global.css";
-import "./styles/components.css";
 
 import "./styles/footer.css";
 import "./styles/nav.css";

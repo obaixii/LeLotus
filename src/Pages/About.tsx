@@ -1,7 +1,14 @@
+import { CTAAbout, HeroAbout, PhilosophyAbout, StatsStripAbout, ValuesAbout } from "../Components";
+
 export default function About() {
     return (
-        <div>
-            <h1>About Us</h1>
+
+        <div id="page-about" className="page">
+            <HeroAbout />
+            <PhilosophyAbout />
+            <StatsStripAbout />
+            <ValuesAbout />
+            <CTAAbout />
         </div>
     )
 }
