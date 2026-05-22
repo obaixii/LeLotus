@@ -2,6 +2,7 @@
 export { default as Nav } from './Main/Nav';
 export { default as Footer } from './Main/Footer';
 export { default as EmptyState } from './Main/EmptyState'; // For Filter Tabs when no results match the filter
+export { default as SuccessModal } from './Main/SuccessModal'; // Modal to show after successful booking
 
 // HOME PAGE
 export { default as HeroHome } from './HomePage/HeroHome';
@@ -38,3 +39,8 @@ export { default as HeroBA } from './BeforeAfterPage/HeroBA';
 export { default as FilterTabsBA } from './BeforeAfterPage/FilterTabsBA';
 export { default as GridBA } from './BeforeAfterPage/GridBA';
 export { default as CTABA } from './BeforeAfterPage/CTABA';
+
+// BOOKING PAGE
+export { default as HeroBooking } from './BookingPage/HeroBooking';
+export { default as InfoBooking } from './BookingPage/InfoBooking';
+export { default as FormBooking } from './BookingPage/FormBooking';

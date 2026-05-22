@@ -169,3 +169,76 @@ select {
     font-size: 0.83rem;
     margin-bottom: 20px;
 }
+
+/* ─── Form validation error ─── */
+.form-error {
+    display: block;
+    font-size: 0.72rem;
+    color: #e05252;
+    margin-top: 5px;
+    letter-spacing: 0.02em;
+}
+
+/* ─── Submit disabled state ─── */
+.form-submit:disabled {
+    cursor: not-allowed;
+}
+
+/* ─── FIELD TOOLTIP ─── */
+.form-group {
+    position: relative;
+}
+
+.field-tooltip {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 0;
+    background: #1e2424;
+    color: rgba(255, 255, 255, 0.85);
+    padding: 7px 12px;
+    border-radius: 8px;
+    font-size: 0.72rem;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid rgba(224, 82, 82, 0.3);
+    z-index: 20;
+    pointer-events: none;
+    animation: tooltip-in 0.18s ease;
+}
+
+.field-tooltip svg {
+    color: #e05252;
+    flex-shrink: 0;
+}
+
+/* Arrow pointing down */
+.field-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 16px;
+    border: 5px solid transparent;
+    border-top-color: #1e2424;
+}
+
+@keyframes tooltip-in {
+    from {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Red border on invalid inputs */
+input.input-error,
+select.input-error,
+textarea.input-error {
+    border-color: #e05252 !important;
+    background: rgba(224, 82, 82, 0.03);
+}
