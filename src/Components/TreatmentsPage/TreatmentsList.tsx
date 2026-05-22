@@ -1,4 +1,8 @@
-import { useState } from "react"
+import EmptyState from "../Main/EmptyState"
+
+interface Props {
+    active: string;
+}
 
 const treatments = [
     {
@@ -51,12 +55,12 @@ const treatments = [
     },
 ]
 
-export default function TreatmentsList() {
-    const [active, setActive] = useState('all')
-
+export default function TreatmentsList({ active }: Props) {
     const visible = active === 'all'
         ? treatments
         : treatments.filter(t => t.cat === active)
+
+    if (visible.length === 0) return <EmptyState active={active} />
 
     return (
         <div id="treatments-list">
@@ -75,5 +79,6 @@ export default function TreatmentsList() {
                     </div>
                 </div>
             ))}
-        </div>)
+        </div>
+    );
 }
