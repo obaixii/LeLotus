@@ -1,11 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
 import { Footer, Nav } from './Components/index.tsx';
-import { About, Doctors, Home, Treatments } from './Pages/index.tsx';
+import { About, BeforeAfter, Doctors, Home, Treatments } from './Pages/index.tsx';
 
 export default function App() {
   return (
     <>
-      <div className="min-h-screen bg-[#f8faf9] font-body text-[#2c3030]">
+      <div className="min-h-screen bg-light-bg font-body text-dark-grey">
         <Nav />
         {/* Routes will go here */}
         <Routes>
@@ -13,6 +13,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/treatments" element={<Treatments />} />
           <Route path="/doctors" element={<Doctors />} />
+          <Route path="/before-after" element={<BeforeAfter />} />
         </Routes>
         <Footer />
       </div>

@@ -1,10 +1,11 @@
-import { useState } from "react"
+interface Props {
+    active: string;
+    setActive: (val: string) => void;
+}
 
-export default function FiltersTabsTreatment() {
-    const [active, setActive] = useState('all')
+const filters = ['all', 'skin', 'hair', 'body', 'injectables', 'laser']
 
-    const filters = ['all', 'skin', 'hair', 'body', 'injectables', 'laser']
-
+export default function FiltersTabsTreatment({ active, setActive }: Props) {
     return (
         <div className="filter-tabs">
             {filters.map(f => (
@@ -17,5 +18,5 @@ export default function FiltersTabsTreatment() {
                 </button>
             ))}
         </div>
-    )
+    );
 }

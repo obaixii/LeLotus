@@ -1,7 +1,14 @@
+import EmptyState from "../Main/EmptyState"
+
+interface Props {
+    active: string;
+}
+
 const doctors = [
     {
         name: 'Dr. Aisha Sohail',
         spec: 'Consultant Dermatologist',
+        filter: 'dermatologist',
         creds: ['MBBS', 'FCPS Dermatology'],
         bio: 'Specializes in medical and cosmetic dermatology with over 12 years of clinical experience.',
         gender: 'female',
@@ -10,6 +17,7 @@ const doctors = [
     {
         name: 'Dr. Mahnoor Fatima',
         spec: 'Aesthetic Physician',
+        filter: 'aesthetician',
         creds: ['MBBS', 'Diploma Aesthetic Medicine'],
         bio: 'Expert in injectables, non-surgical facial rejuvenation, and advanced skin treatments.',
         gender: 'female',
@@ -18,6 +26,7 @@ const doctors = [
     {
         name: 'Dr. Usman Khalid',
         spec: 'Hair Restoration Specialist',
+        filter: 'hair',
         creds: ['MBBS', 'PG Diploma Trichology'],
         bio: 'Specializes in hair loss diagnosis, PRP therapies, and advanced hair restoration techniques.',
         gender: 'male',
@@ -26,6 +35,7 @@ const doctors = [
     {
         name: 'Dr. Sana Ilyas',
         spec: 'Aesthetic Physician',
+        filter: 'aesthetician',
         creds: ['MBBS', 'Diploma in Laser Medicine'],
         bio: 'Expert in laser treatments, skin resurfacing, and pigmentation correction procedures.',
         gender: 'female',
@@ -34,6 +44,7 @@ const doctors = [
     {
         name: 'Dr. Bilal Tariq',
         spec: 'Body Contouring Specialist',
+        filter: 'aesthetician',
         creds: ['MBBS', 'Aesthetic Medicine'],
         bio: 'Specializes in non-surgical body sculpting, fat reduction, and skin tightening procedures.',
         gender: 'male',
@@ -48,10 +59,16 @@ const Silhouette = () => (
     </svg>
 )
 
-export default function DoctorsList() {
+export default function DoctorsList({ active }: Props) {
+    const visible = active === 'all'
+        ? doctors
+        : doctors.filter(d => d.filter === active)
+
+    if (visible.length === 0) return <EmptyState active={active} />
+
     return (
         <div className="doctors-grid">
-            {doctors.map((doc) => (
+            {visible.map((doc) => (
                 <div key={doc.name} className="doctor-card">
                     <div className={`doctor-card-img ${doc.gender}`} style={{ background: doc.bg }}>
                         <Silhouette />
@@ -78,5 +95,5 @@ export default function DoctorsList() {
                 </div>
             </div>
         </div>
-    )
+    );
 }
