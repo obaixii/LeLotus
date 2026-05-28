@@ -15,15 +15,18 @@ import "./styles/pages/treatments.css";
 import "./styles/pages/doctors.css";
 import "./styles/pages/beforeAfter.css";
 import "./styles/pages/booking.css";
+import "./styles/pages/privacypolicy.css";
 
 import "./styles/animations.css";
 import "./styles/responsive.css";
 
 import App from "./App.tsx";
+import Scroll from "./Components/Main/Scroll.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
+    <Scroll />
       <App />
     </BrowserRouter>
   </StrictMode>
