@@ -88,14 +88,14 @@ export default function Footer() {
                         <div className="footer-logo">LE LOTUS <span>CLINIQUE</span></div>
                         <p>Pakistan's award-winning aesthetic clinic. 30+ advanced treatments across 6 cities — delivered by board-certified experts with FDA-approved technology.</p>
                         <div className="footer-socials">
-                            <a href="https://www.facebook.com/share/1GPSTsQMY5/" target="_blank" rel="noreferrer" aria-label="Facebook">
+                            <Link to="https://www.facebook.com/share/1GPSTsQMY5/" target="_blank" rel="noreferrer" aria-label="Facebook">
                                 <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" /></svg>
-                            </a>
-                            <a href="https://www.instagram.com/lelotuspk" target="_blank" rel="noreferrer" aria-label="Instagram">
+                            </Link>
+                            <Link to="https://www.instagram.com/lelotuspk" target="_blank" rel="noreferrer" aria-label="Instagram">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="16" height="16"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" /><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></svg>
-                            </a>
+                            </Link>
                             <a href="https://www.snapchat.com/add/lotusclinique" target="_blank" rel="noreferrer" aria-label="Snapchat">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2C8.5 2 7 4.5 7 7v1c-.5.1-1.5.4-1.5 1s.8.9 1.2 1c-.2.4-.5.8-1.2 1.2-.4.2-.5.6-.1.9.6.4 1.5.5 2 .5.4.6 1.2 1.4 2.6 1.4s2.2-.8 2.6-1.4c.5 0 1.4-.1 2-.5.4-.3.3-.7-.1-.9-.7-.4-1-.8-1.2-1.2.4-.1 1.2-.4 1.2-1S18.5 8.1 18 8V7c0-2.5-1.5-5-6-5z" /></svg>
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2C8.5 2 7 4.5 7 7v1c-.5.1-1.5.4-1.5 1s.8.9 1.2 1c-.2.4-.5.8-1.2 1.2-.4.2-.5.6-.1.9.6.4 1.5.5 2 .5.4.6 1.2 1.4 2.6 1.4s2.2-.8 2.6-1.4c.5 0 1.4-.1 2-.5.4-.3.3-.7-.1-.9-.7-.4-1-.8-1.2-1.2.4-.1 1.2-.4 1.2-1S18.5 8.１ １8 8V7c0-2.5-１．５-５-６-５z" /></svg>
                             </a>
                         </div>
                     </div>
@@ -117,7 +117,7 @@ export default function Footer() {
                             <Link to="/treatments">Treatments</Link>
                             <Link to="/before-after">Before & After</Link>
                             <Link to="/booking">Book Appointment</Link>
-                            <a href="mailto:hr@lelotus.pk">Careers</a>
+                            <Link to="mailto:hr@lelotus.pk">Careers</Link>
                         </div>
 
                         <div className="footer-col">
@@ -163,7 +163,7 @@ export default function Footer() {
                 <div className="footer-bottom">
                     <span>© 2026 Le Lotus Clinique. All rights reserved.</span>
                     <span>
-                        <a href="#">Privacy Policy</a>
+                        <Link to="/privacy-policy">Privacy Policy</Link>
                         <span style={{ margin: '0 10px', opacity: 0.3 }}>·</span>
                         <a href="#">Terms of Service</a>
                     </span>

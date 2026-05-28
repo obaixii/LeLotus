@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import { Footer, Nav } from './Components/index.tsx';
-import { About, BeforeAfter, Booking, Doctors, Home, Treatments } from './Pages/index.tsx';
+import { About, BeforeAfter, Booking, Doctors, Home, PrivacyPolicy, Treatments } from './Pages/index.tsx';
 
 export default function App() {
   return (
@@ -15,6 +15,7 @@ export default function App() {
           <Route path="/doctors" element={<Doctors />} />
           <Route path="/before-after" element={<BeforeAfter />} />
           <Route path="/booking" element={<Booking />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
         <Footer />
       </div>

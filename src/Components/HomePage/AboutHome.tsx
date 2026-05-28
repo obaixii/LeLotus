@@ -1,4 +1,4 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function AboutHome() {
     return (
@@ -27,12 +27,12 @@ export default function AboutHome() {
                         <div className="section-divider"></div>
                         <p>At Le Lotus Clinique, we believe true beauty comes from confidence. Our expert team of doctors and specialists use evidence-based treatments to help you look your best — naturally.</p>
                         <ul style={{ listStyle: 'none', margin: '24px 0', display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                            <li style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '0.85rem', color: '#5a6464' }}><span style={{ color: 'var(--teal)', fontSize: '1rem' }}>✓</span> Internationally approved treatments</li>
-                            <li style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '0.85rem', color: '#5a6464' }}><span style={{ color: 'var(--teal)', fontSize: '1rem' }}>✓</span> Customized plans for every individual</li>
-                            <li style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '0.85rem', color: '#5a6464' }}><span style={{ color: 'var(--teal)', fontSize: '1rem' }}>✓</span> Safe, effective & long-lasting results</li>
-                            <li style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '0.85rem', color: '#5a6464' }}><span style={{ color: 'var(--teal)', fontSize: '1rem' }}>✓</span> Luxurious & comfortable environment</li>
+                            <li style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '0.85rem', color: '#5a6464' }}><span style={{ color: 'var(--color-teal)', fontSize: '1rem' }}>✓</span> Internationally approved treatments</li>
+                            <li style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '0.85rem', color: '#5a6464' }}><span style={{ color: 'var(--color-teal)', fontSize: '1rem' }}>✓</span> Customized plans for every individual</li>
+                            <li style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '0.85rem', color: '#5a6464' }}><span style={{ color: 'var(--color-teal)', fontSize: '1rem' }}>✓</span> Safe, effective & long-lasting results</li>
+                            <li style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '0.85rem', color: '#5a6464' }}><span style={{ color: 'var(--color-teal)', fontSize: '1rem' }}>✓</span> Luxurious & comfortable environment</li>
                         </ul>
-                        <a href="#" className="btn btn-primary">Discover More →</a>
+                        <Link to="/treatments" className="btn btn-primary">Explore Treatments →</Link>
                     </div>
                 </div>
             </div>

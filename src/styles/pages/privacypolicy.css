@@ -1,0 +1,236 @@
+/* ─────────────────────────────────────
+   PRIVACY POLICY PAGE
+   ───────────────────────────────────── */
+
+/* ─── Hero Meta Chips ─── */
+.pp-meta-chip {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 10px 18px;
+}
+
+.pp-meta-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-mid-grey);
+    font-weight: 500;
+}
+
+.pp-meta-value {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--color-dark-grey);
+}
+
+/* ─── Body Wrapper ─── */
+.pp-body {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ─── Accordion Section ─── */
+.privacy-section {
+    padding: 32px 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.privacy-section:last-child {
+    border-bottom: none;
+}
+
+/* ─── Accordion Head ─── */
+.pp-accordion-head {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 0 20px;
+    text-align: left;
+    gap: 16px;
+}
+
+.pp-accordion-head:hover h2 {
+    color: var(--color-teal);
+    transition: var(--transition);
+}
+
+.pp-accordion-head h2 {
+    margin: 0;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    color: var(--color-dark-grey);
+    transition: var(--transition);
+}
+
+.pp-chevron {
+    font-size: 1.4rem;
+    color: var(--color-teal);
+    flex-shrink: 0;
+    line-height: 1;
+    font-family: var(--font-body);
+    font-weight: 300;
+}
+
+/* ─── Accordion Body ─── */
+.pp-accordion-body {
+    padding-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.pp-accordion-body p {
+    margin: 0;
+    font-size: 0.92rem;
+    line-height: 1.75;
+    color: #5a6464;
+}
+
+/* ─── Subheading ─── */
+.privacy-subheading {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--color-teal);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 8px 0 4px;
+    padding-left: 12px;
+    border-left: 2px solid var(--color-teal);
+}
+
+/* ─── Clause List ─── */
+.privacy-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    background: var(--color-soft-grey);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+}
+
+.privacy-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-size: 0.88rem;
+    color: #5a6464;
+    line-height: 1.7;
+    padding: 12px 18px;
+    border-bottom: 1px solid var(--color-border);
+    transition: background 0.2s ease;
+}
+
+.privacy-list li:last-child {
+    border-bottom: none;
+}
+
+.privacy-list li:hover {
+    background: rgba(0, 148, 163, 0.04);
+}
+
+.privacy-list-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(0, 148, 163, 0.1);
+    flex-shrink: 0;
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.privacy-list-dot::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-teal);
+}
+
+/* ─── Note Block ─── */
+.privacy-note {
+    background: rgba(0, 148, 163, 0.05);
+    border-left: 3px solid var(--color-teal);
+    border-radius: 0 8px 8px 0;
+    padding: 14px 18px;
+    font-size: 0.85rem;
+    color: var(--color-dark-grey);
+    font-style: italic;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ─── Link ─── */
+.privacy-link {
+    color: var(--color-teal);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 148, 163, 0.3);
+    transition: var(--transition);
+}
+
+.privacy-link:hover {
+    border-bottom-color: var(--color-teal);
+}
+
+/* ─── Contact Card ─── */
+.privacy-contact-card {
+    background: var(--color-light-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 28px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.privacy-contact-card strong {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    color: var(--color-dark-grey);
+    margin-bottom: 4px;
+    display: block;
+}
+
+.privacy-contact-card p {
+    margin-bottom: 0;
+    font-size: 0.88rem;
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+    .pp-accordion-head {
+        padding: 0 0 16px;
+    }
+
+    .pp-accordion-head h2 {
+        font-size: 1.1rem;
+    }
+
+    .privacy-contact-card {
+        padding: 20px;
+    }
+
+    .pp-meta-chip {
+        padding: 8px 14px;
+    }
+
+    .privacy-list li {
+        padding: 10px 14px;
+    }
+}

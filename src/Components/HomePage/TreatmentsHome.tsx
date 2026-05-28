@@ -1,4 +1,4 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function TreatmentsHome() {
     return (
@@ -9,7 +9,7 @@ export default function TreatmentsHome() {
                         <div className="section-label">Treatments</div>
                         <h2>Our Signature<br />Treatments</h2>
                     </div>
-                    <a href="#" className="btn btn-outline">View All Treatments</a>
+                    <Link to="/treatments" className="btn btn-outline">View All Treatments</Link>
                 </div>
                 <div className="grid-4">
                     <div className="treatment-card">
